@@ -1,0 +1,12 @@
+donate_homepage:
+    path:     /
+    defaults: { _controller: DonateBundle:Default:index }
+donate:
+    path:     /donate
+    defaults: { _controller: DonateBundle:Donate:Donate }
+ajoutD:
+    path:     /ajout
+    defaults: { _controller: DonateBundle:Donate:Ajout }
+listD:
+    path:     /list
+    defaults: { _controller: DonateBundle:Donate:listD }

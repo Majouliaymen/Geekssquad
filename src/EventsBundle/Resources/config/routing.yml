@@ -1,0 +1,12 @@
+events_homepage:
+    path:     /
+    defaults: { _controller: EventsBundle:Default:index }
+events:
+    path:     /events
+    defaults: { _controller: EventsBundle:Events:Event }
+setSession:
+    path:     /setSession/{id}
+    defaults: { _controller: EventsBundle:Default:setSession }
+getAllSession:
+    path:     /getSession
+    defaults: { _controller: EventsBundle:Default:getallSession }

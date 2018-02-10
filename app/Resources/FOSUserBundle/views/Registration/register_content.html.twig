@@ -1,0 +1,105 @@
+{% extends '::layout.html.twig' %}
+{% block content %}
+    {% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+{{ dump(form) }}
+    <div class="container">
+        <div class="row main">
+            <div class="main-login main-center">
+                <h5>Sign up once and watch any of our free demos.</h5>
+
+
+                    <div class="form-group">
+                        <label for="Username" class="cols-sm-0 control-label">Username</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true" ></i> </span>
+                                {{ form_widget(form.username) }}
+                                {#<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name" />#}
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label"> Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                {{ form_widget(form.email) }}                            </div>
+                        </div>
+                    </div>
+
+                <div class="form-group">
+                    <label for="form.nom" class="cols-sm-2 control-label">Nom</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            {{ form_widget(form.nom) }}                            </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Prénom</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            {{ form_widget(form.prenom) }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            {{ form_widget(form.email) }}                            </div>
+                    </div>
+                </div>
+
+                {#<div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Username</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            {{ form_widget(form.password) }}
+                        </div>
+                    </div>
+                </div>#}
+
+                    {#<div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                {{ form_widget(form.username) }}
+                            </div>
+                        </div>
+                    </div>#}
+
+                    {#<div class="form-group">
+                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                            </div>
+                        </div>
+                    </div>#}
+
+                    <div class="form-group ">
+
+                        <div>
+                            <input type="submit" value="créer compte" id="button" class="btn btn-primary btn-lg btn-block login-button"/>
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
